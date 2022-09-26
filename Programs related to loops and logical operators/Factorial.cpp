@@ -10,7 +10,7 @@ int main()
     {
         factorial = factorial * i;
     }
-    std::cout << "the factorial is" << factorial;
+    std::cout << "the factorial is " << factorial;
 
     return 0;
 }
