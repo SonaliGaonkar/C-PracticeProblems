@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 int i;
-double sum, difference, diff, variance, deviation;
+double sum = 0, difference, diff,total_diff, variance, deviation;
 double standard_deviation(int arr[10])
 {
     for (i = 0; i < 10; ++i)
@@ -9,18 +9,18 @@ double standard_deviation(int arr[10])
         sum += arr[i];
     }
     double mean = sum / 10;
+    std::cout << "\nmean : " << mean;
     for (i = 0; i < 10; ++i)
     {
         difference = mean - arr[i];
         diff = difference * difference;
+        total_diff +=diff;
     }
-    for (i = 0; i < 10; ++i)
-    {
-        diff += arr[i];
-    }
-    variance = diff / 10;
+    
+    variance = total_diff / 10;
+    std::cout << "\nvariance : " << variance;
     deviation = sqrt(variance);
-    std::cout << "standard_deviation : " << deviation;
+    std::cout << "\nstandard_deviation : " << deviation;
 }
 int main()
 {
@@ -30,10 +30,6 @@ int main()
     {
 
         std::cin >> arr[i];
-    }
-    for (int i = 0; i < 10; ++i)
-    {
-        std::cout << "Entered number : arr[" << i << "] = " << arr[i] << "\n";
     }
     standard_deviation(arr);
 
