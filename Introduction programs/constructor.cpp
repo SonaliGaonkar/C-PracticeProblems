@@ -7,7 +7,7 @@ class Rectangle
     double height;
 
 public:
-    Rectangle()
+    Rectangle() // provides data for the object which is why it is known as constructors
     {
         std::cout << "\nEnter length : ";
         std::cin >> length;
