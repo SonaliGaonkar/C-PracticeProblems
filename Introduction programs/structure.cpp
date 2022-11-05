@@ -1,13 +1,13 @@
 #include <iostream>
 
-struct employee
+struct Employee
 {
     char name[50];
     int age;
     char address[20];
     float salary;
 };
-employee getData(employee E)
+Employee getData(Employee E)
 {
 
     std::cout << "Enter name of employee : ";
@@ -20,7 +20,7 @@ employee getData(employee E)
     std::cin >> E.salary;
     return E;
 }
-void displayData(employee E)
+void displayData(Employee E)
 {
     std::cout << "\nName of employee : " << E.name;
     std::cout << "\nAge of employee : " << E.age;
@@ -29,7 +29,7 @@ void displayData(employee E)
 }
 int main()
 {
-    employee E, temp;
+    Employee E, temp;
     temp = getData(E);
     E = temp;
     displayData(E);
